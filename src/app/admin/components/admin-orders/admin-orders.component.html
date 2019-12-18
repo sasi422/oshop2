@@ -1,0 +1,21 @@
+<h1>Orders</h1>
+<div class="card">
+  <table class="table"  style="margin-bottom: 0;">
+    <thead>
+      <tr>
+        <th>Customer</th>
+        <th>Date</th>
+        <th></th>
+      </tr>
+    </thead> 
+    <tbody>
+      <tr *ngFor="let order of orders$ | async;even as isEven">
+        <td [class.active]="isEven">{{ order.shipping.name }}</td>
+        <td [class.active]="isEven">{{ order.datePlaced | date}}</td>
+        <td [class.active]="isEven">
+          <a href="#" [class.active]="isEven">View</a>
+        </td>
+      </tr>
+    </tbody> 
+  </table>
+</div>

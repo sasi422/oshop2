@@ -1,0 +1,17 @@
+.login-page {
+    position: fixed;
+    top: 35%;
+    left: 0;
+    right: 0;
+}
+.page {
+    width: 410px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 2px 2px 6px 4px #ddd6d6;
+    border-radius: 5px;
+}
+
+h1 {
+    color: #28a745;
+}

@@ -1,0 +1,10 @@
+
+.dropdown-toggle { 
+  cursor: pointer;
+}
+.icon-cls {
+  height: 20px;
+  width: 20px;
+  padding: 2px;
+  padding-top: 0;
+}

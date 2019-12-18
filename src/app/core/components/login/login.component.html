@@ -1,0 +1,36 @@
+<div class="login-page">
+  <div class="page">
+    <h1 class="text-center mb-4">sdsdsds</h1>
+    <form [formGroup]="form">
+     
+      <div class="form-group">
+        <label for="username">User Name</label>
+        <input 
+        type="text" 
+        id="username" 
+        class="form-control" 
+        formControlName="username">
+        <div class="alert alert-danger" *ngIf="userName.touched && userName.invalid">
+          <div *ngIf="userName.errors.required">user name required.</div>
+          <div *ngIf="userName.errors.minlength">user name must have minimum of {{ userName.errors.minlength.requiredLength }} charecters</div>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+        type="text" 
+        id="password" 
+        class="form-control"
+        formControlName="password">
+        <div class="alert alert-danger" *ngIf="password.touched && password.invalid">password is required.</div>
+      </div>
+    </form>
+    <div class="text-center">
+      <button class="btn btn-success" [disabled]="!(form.valid)">Submit</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- <button (click)="login() && userLogin()" class="btn btn-primary">Login with Google</button> -->
